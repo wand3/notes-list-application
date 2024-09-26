@@ -1,6 +1,3 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import Test from "./components/test";
 import './index.css'
 import FullList from './model/FullList';
 import ListItem from './model/ListItem';
@@ -26,8 +23,17 @@ const initApp = (): void => {
         const newEntryText: string = input.value.trim()
         // do nothing if its empty 
         if (!newEntryText.length) return
+ 
+        // calculate item id
+        const itemId: number = fullList.list.length ? parseInt(fullList.list[fullList.list.length - 1].id) + 1 : 1
 
-        
+        // create item 
+        const newItem = new ListItem(itemId.toString(), newEntryText)
+        // add item 
+        fullList.addItem(newItem)
+        // Re-render list with new item included
+        template.render(fullList)
+
     })
 
     // clear items
