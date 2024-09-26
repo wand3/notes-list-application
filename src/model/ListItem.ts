@@ -9,7 +9,7 @@ export interface Item {
 // A default class that implements the interface Item 
 export default class ListItem implements Item {
 
-    // class constructor inistailized with default values
+    // class constructor inistailized with default values using parameters
     constructor (
         private _id: string = '',
         private _item: string = '',

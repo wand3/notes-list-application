@@ -8,6 +8,38 @@
   </head>
   <body>
     <div id="root"></div>
+
+    <h3>My List</h3>
+    <section class="newItemEntry">
+      <form id="itemEntryForm">
+        <label for="newItem">Enter a new todo item</label>
+        <input type="text" id="newItem">
+
+        <button title="Add new item" aria-label="Add new item to list">+</button>
+      
+      </form>
+    </section>
+
+
+    <section>
+      <header>
+        <h2 class="listTitle">List</h2>
+        <button id="clearItemsButton" class="button listTitle__button" title="Clear the list"
+          aria-label="Remove all items from the list">
+          Clear
+        </button>
+      </header>  
+      <hr />
+
+      <ul id="listItems">
+      
+      </ul>
+
+      
+    
+    </section>
+    
+
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
