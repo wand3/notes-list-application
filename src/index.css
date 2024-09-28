@@ -1,4 +1,11 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@tailwind base; /* base styles applied globally accross project */
+@tailwind components;   /* component styles applied to components or reusable UI elements */
+@tailwind utilities;  /* utilities styles atomic styles to individual properties e.g margin, border */
 
+
+/* used for syling components or elements with larger class */
+@layer components {
+    .button-submit {
+        @apply justify-between rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600
+    }
+}
