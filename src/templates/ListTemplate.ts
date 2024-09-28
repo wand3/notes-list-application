@@ -35,7 +35,7 @@ export default class ListTemplate implements DOMList  {
 
             // create checkbox element and its attributes and append to parent li
             const check = document.createElement("input") as HTMLInputElement
-            check.className = "peer size-3.5 appearance-none rounded-sm border border-slate-300 accent-pink-500 dark:accent-pink-600 checked:appearance-auto"
+            check.className = "peer h-auto w-[20px] appearance-none rounded-sm border border-slate-300 font-semibold text-white shadow-sm focus-visible:outline focus-visible:outline-2 checked:appearance-auto"
             check.type = "checkbox"
             check.id = item.id
             check.tabIndex = 0
@@ -51,7 +51,7 @@ export default class ListTemplate implements DOMList  {
 
             // create the label Element
             const label = document.createElement("label") as HTMLLabelElement
-            label.className = "peer items-center gap-3 rounded-md px-2 hover:bg-slate-100"
+            label.className = "select-none text-slate-700 peer-checked:text-slate-400 peer-checked:line-through"
             label.htmlFor = item.id
             label.textContent = item.item
             li.append(label)

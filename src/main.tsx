@@ -46,6 +46,17 @@ const initApp = (): void => {
     
     })
 
+    // toggle dark mode 
+    const toggleDark = document.getElementById("toggleDark") as HTMLButtonElement
+    toggleDark.addEventListener('click', () => {
+        if (document.documentElement.classList.contains('dark')){
+            document.documentElement.classList.remove('dark')
+        }
+        else {
+            document.documentElement.classList.add('dark')
+        }
+    });
+
     // what happens right away
     fullList.load()
     template.render(fullList)
@@ -54,3 +65,17 @@ const initApp = (): void => {
 
 // ensures elemets exist before we can interact with them
 addEventListener("DOMContentLoaded", initApp)
+// addEventListener("DOMContentLoaded", (): void => {
+//     const toggleDark = document.getElementById("toggleDark") as HTMLButtonElement
+//     toggleDark.addEventListener('click', () => {
+//         if (document.documentElement.classList.contains('dark')){
+//             document.documentElement.classList.remove('dark')
+//         }
+//         else {
+//             document.documentElement.classList.add('dark')
+//         }
+//         alert('click')
+//     });
+
+// }, )
+

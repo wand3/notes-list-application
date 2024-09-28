@@ -5,13 +5,35 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite + React + TS</title>
+    <script>
+      // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+      if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark')
+      } else {
+        document.documentElement.classList.remove('dark')
+      }
+
+      // Whenever the user explicitly chooses light mode
+      localStorage.theme = 'light'
+
+      // Whenever the user explicitly chooses dark mode
+      localStorage.theme = 'dark'
+
+      // Whenever the user explicitly chooses to respect the OS preference
+      localStorage.removeItem('theme')
+    </script>
   </head>
-  <body class="bg-slate">
-    <nav class="block z-10 h-[15%] w-full bg-white-400 inline-flex my-4 flex">
+  <body class="bg-slate-900/2 dark:bg-slate-100">
+    <nav class="block z-10 h-[15%] w-full bg-white-400 inline-flex my-4 flex ">
       <h3 class="text-3xl text-gray-700 mx-4 mt-3 flex-1">Keep List</h3>
+
+      <button id="toggleDark" class="sm:min-width-[15%] justify-between rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+      >Toggle</button>
+
       <div class="w-10 h-10 mx-4 mt-2">
         <img class="rounded-full" src="./src/assets/image.png" alt="">
       </div>
+
     </nav>
     <hr class="my-2 border-gray-900 w-[90%] flex justify-center mx-[5%]">
     
@@ -28,7 +50,7 @@
     </section>
 
 
-    <section>
+    <section class="dark:bg-slate-700 bg-slate-100">
       <header class="flex justify-between px-7 md:px-2 mx-4">
         <h2 class="listTitle flex-1">List</h2>
         <button id="clearItemsButton" class="button listTitle__button" title="Clear the list"
