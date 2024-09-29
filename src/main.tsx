@@ -47,7 +47,7 @@ const initApp = (): void => {
     })
 
     // toggle dark mode 
-    const toggleDark = document.getElementById("toggleDark") as HTMLButtonElement
+    const toggleDark = document.getElementById("toggleDark") as HTMLElement
     toggleDark.addEventListener('click', () => {
         if (document.documentElement.classList.contains('dark')){
             document.documentElement.classList.remove('dark')
