@@ -6,6 +6,19 @@
 /* used for syling components or elements with larger class */
 @layer components {
     .button-submit {
-        @apply justify-between rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600
+        @apply justify-between rounded-md bg-[#4158D0] px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600
+    }
+    /* .blurglass {
+        @apply bg-[linear-gradient( 109.6deg,  rgba(112,246,255,0.33) 11.2%, rgba(221,108,241,0.26) 42%, rgba(229,106,253,0.71) 71.5%, rgba(123,183,253,1) 100.2% )] z-10 lg:p-[10%] sm:p-[5%] m-auto backdrop-blur-[10px] border-[10px] border-blue-600 rounded-md
+    } */
+    .blurimage {
+        @appy backdrop-blur-sm
+    }
+    .blur-bright-gradient {
+        @apply bg-gradient-to-tl from-sky-200 via-purple-200 via-purple-300 to-sky-500
+    }
+    .blurglass-dark {
+        /* @apply bg-gradient-to-b from-black-900 to-black-800 opacity-90 */
     }
 }
+

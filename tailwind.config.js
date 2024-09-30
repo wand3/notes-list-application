@@ -13,6 +13,7 @@ theme: {
 			// fire can be added to any styling class attribute that uses colors 
 			fire: '#000000'
 		} 
+
 	},
 },
 plugins: [],
