@@ -24,59 +24,61 @@
     </script>
   </head>
   <body class="relative bg-cover bg-center h-screen bg-[url('./src/assets/samurai-pexels.jpg')] w-full">
-    <div class="absolute w-full h-full backdrop-blur-sm" ></div>
-      <div class="bg-black/70 absolute  m-[5%] w-[90%] h-fit py-7 border-black rounded-md px-5">
+    <div class="absolute w-full h-full backdrop-blur-md" ></div>
+      <div class="bg-slate-100/45 text-[#dadada] absolute  m-[5%] w-[90%] h-fit py-7 border-black rounded-md px-5 dark:background-light">
         <nav class="h-[15%] w-full bg-white-400 inline-flex my-4 justify-between">
           <div>
-            <h3 class="text-3xl text-gray-700 mx-4 mt-3">Keep List</h3>
+            <h3 class="justify-self-start text-3xl md:text-5xl text-light dark:text-dark mx-4 mt-3">Keep List</h3>
           </div>
 
-          <div id="toggleDark" class="flex shrink drop-shadow-lg dark:drop-shadow-lg bg-transparent border dark:border-1 h-fit px-2 my-3 pt-2 pb-2 items-center rounded-2xl relative cursor-pointer">
+          <div id="toggleDark" class="flex shrink background-light drop-shadow-lg dark:drop-shadow-lg dark:bg-slate-700/20  dark:border h-fit px-2 my-3 pt-2 pb-2 items-center rounded-2xl relative cursor-pointer">
 
 
-            <svg class="moon shrink h-7 w-6 mr-2 dark:text-black dark:drop-shadow-xl" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+            <svg class="moon shrink h-7 w-6 mr-2 dark:drop-shadow-xl" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
               <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" />
             </svg>
 
-            <div id="toggleBall" class="w-8 shrink-sm px-1 h-7 drop-shadow-lg bg-[#003158] dark:ml-7 rounded-full absolute transform transition-transform duration-300">
+            <div id="toggleBall" class="w-8 shrink-sm px-1 h-7 drop-shadow-lg bg-indigo-600 dark:ml-7 rounded-full absolute transform transition-transform duration-300">
             </div>
 
-            <svg class="ml-auto h-6 w-6 shrink text-black dark:border-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+            <svg class="ml-auto h-6 w-6 shrink dark:border-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 0 0 1.5-.189m-1.5.189a6.01 6.01 0 0 1-1.5-.189m3.75 7.478a12.06 12.06 0 0 1-4.5 0m3.75 2.383a14.406 14.406 0 0 1-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 1 0-7.517 0c.85.493 1.509 1.333 1.509 2.316V18" />
             </svg>
             
           </div>
           
-
-          <div class="w-10 h-10 mx-4 mt-2">
-            <img class="rounded-full" src="./src/assets/image.png" alt="">
+          <div class="" style="width: 10%;">
+            <img class="w-fit rounded-full" src="./src/assets/image.png" alt="">
           </div>
 
         </nav>
-        <hr class="my-2 border-gray-900 w-[90%] flex justify-center mx-[5%]">
+        <hr class="my-2 border-gray-200/15 w-[90%] flex justify-center mx-[5%]">
         
-        <section class="newItemEntry w-full ring-indigo-600 inline-flex mx-[5%] my-5">
+        <section class="newItemEntry w-full ring-indigo-600 my-5">
           <form class="w-full" id="itemEntryForm">
           
             <label for="newItem"></label>
 
-            <input class="sm:max-width-[75%] w-[80%] lg:justify-center mx-3 rounded-md border-1 py-1.5 pl-7 pr-15 text-gray-900 ring-1 ring-inset placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" placeholder="Type a note" type="text" id="newItem">
+            <input class="background-light mb-2 dark:background-dark w-[90%] lg:justify-center rounded-md border-1 py-1.5 px-3 ring-1 ring-inset placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" placeholder="Type a note" type="text" id="newItem" style="height: 3rem;">
 
-            <button class="sm:min-width-[15%] justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" title="Add new item" aria-label="Add new item to list">+</button>
+            <button class="sm:min-width-[10%] justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" title="Add new item" aria-label="Add new item to list">+</button>
           
           </form>
         </section>
 
 
-        <section class="dark:bg-slate-700 bg-slate-100">
+        <section class="dark:background-dark background-light rounded-md py-[4%]">
           <header class="flex justify-between px-7 md:px-2 mx-4">
-            <h2 class="listTitle flex-1">List</h2>
-            <button id="clearItemsButton" class="button listTitle__button" title="Clear the list"
+            <h1 class="listTitle flex-1">List</h2>
+            <button id="clearItemsButton" class="button listTitle__button border hover:bg-indigo-500 shadow-md rounded-md p-2" title="Clear the list"
               aria-label="Remove all items from the list">
-              Clear
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-7 text-indigo-600">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m14.74 9-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 0 1-2.244 2.077H8.084a2.25 2.25 0 0 1-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 0 0-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 0 1 3.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 0 0-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 0 0-7.5 0" />
+              </svg>
+
             </button>
           </header>  
-          <hr />
+          <hr class="my-2"/>
 
           <ul class="w-[80%] mx-auto" id="listItems">
           
